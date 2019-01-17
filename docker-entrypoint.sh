@@ -16,8 +16,10 @@ js="rs.initiate({_id:'${REPLICA_SET_ID}',members:[${members_js}]});"
 
 if [[ -z "${PRIMARY_USER}" ]]
 then
+    echo "Connecting without authentication"
     mongo "${PRIMARY_MEMBER}" --eval "${js}"
 else
+    echo "Connecting with authentication"
     mongo "${PRIMARY_MEMBER}" -u "${PRIMARY_USER}" -p "${PRIMARY_PASSWORD}" --authenticationDatabase "${PRIMARY_DB}" --eval "${js}"
 fi
 
