@@ -79,6 +79,8 @@ networks:
     driver: overlay
 ```
 
+You may also set all three of `PRIMARY_USER`, `PRIMARY_PASS` and `PRIMARY_DB` variables if authentication is needed to connect to the primary.
+
 ## Setup image
 
 The Dockerfile in mongo-replicaset-setup is for initiating the Replica Set on the nodes before stopping.
