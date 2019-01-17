@@ -13,6 +13,6 @@ done
 
 members_js=`echo $(IFS=,; echo "${members[*]}")`
 js="rs.initiate({_id:'${REPLICA_SET_ID}',members:[${members_js}]});"
-mongo "${PRIMARY_MEMBER}/${DATABASE}" --eval "${js}"
+mongo "${PRIMARY_MEMBER}" --eval "${js}"
 
 echo -e "\033[1m Mongo is configured - stopping setup container"
