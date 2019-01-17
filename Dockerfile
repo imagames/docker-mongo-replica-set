@@ -1,5 +1,5 @@
 FROM alpine
-LABEL maintainer "Álvaro Brey <alvaro.brv@gmail.com>"
+MAINTAINER alvaro.brv@gmail.com
 
 RUN apk add --no-cache mongodb bash
 
