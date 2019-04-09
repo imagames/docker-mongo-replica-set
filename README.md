@@ -23,7 +23,7 @@ services:
 
   mongo2:
     image: mongo
-    hostname: mongo1
+    hostname: mongo2
     networks:
       - mongo_replicas
     deploy:
